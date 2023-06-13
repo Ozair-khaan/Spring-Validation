@@ -1,8 +1,14 @@
 package com.practice.entities;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 public class LoginData {
 
+	@NotBlank(message = "User Name can't be empty!!")
+	@Size(min = 3, max = 12, message = "User name must be between 3 to 12 characters!!")
 	private String userName;
+
 	private String email;
 
 	public String getUserName() {
